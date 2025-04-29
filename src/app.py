@@ -1,12 +1,13 @@
 from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
 import openai
+import os
 
 app = Flask(__name__, static_folder="static")
 CORS(app)
 
-openai.api_key = "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"  
-openai.base_url = "https://api.groq.com/openai/v1/" 
+openai.api_key = os.environ.get("OPENAI_API_KEY")
+openai.base_url = "https://api.groq.com/openai/v1/"
 
 @app.route("/")
 def serve_index():
@@ -24,7 +25,10 @@ def chat():
     return jsonify({"response": response})
 
 conversation_history = [
-    {"role": "system", "content": "You are HeartTalk, a kind and helpful medical assistant chatbot. Always answer carefully and professionally."}
+    {
+        "role": "system",
+        "content": "You are HeartTalk, a kind and helpful medical assistant chatbot. Always answer carefully and professionally."
+    }
 ]
 
 def generate_hearttalk_response(user_input):
@@ -39,10 +43,8 @@ def generate_hearttalk_response(user_input):
     )
 
     reply = chat_completion.choices[0].message.content.strip()
-
     conversation_history.append({"role": "assistant", "content": reply})
-
     return reply
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5001, debug=True)
+    app.run(host="0.0.0.0", port=5000)
