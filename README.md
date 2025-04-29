@@ -4,6 +4,8 @@
 
 HeartTalk is a friendly AI chatbot that provides basic medical guidance and symptom support using cutting-edge large language models. It is powered by Groq's blazing-fast LLaMA3 API for real-time, medically-informed responses.
 
+**Live App**: [https://hearttalk.onrender.com](https://hearttalk.onrender.com)
+
 ---
 
 #Features
@@ -16,9 +18,12 @@ HeartTalk is a friendly AI chatbot that provides basic medical guidance and symp
 
 #How It Works
 
-- Frontend: HTML/CSS + JS
-- Backend: Flask (Python)
-- Model: `llama3-8b-8192` served via Groq's OpenAI-compatible API
-- Memory: Conversation context is stored in Python (`conversation_history`)
+| Language Model | `LLaMA3-8B` via Groq API|
+| Backend | `Flask` (Python) |
+| API Key Handling | `Render Environment Variables` |
+| Frontend | HTML, CSS, JS (Vanilla) |
+| UI Effects | Animated pixel hearts, Enter-key sending |
+| Hosting | [Render] |
+| CORS Support | `flask-cors` |
 
 ---
