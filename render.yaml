@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: hearttalk
+    env: python
+    buildCommand: ""
+    startCommand: "python src/app.py"
+    envVars:
+      - key: OPENAI_API_KEY
+        value: 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  
+
