@@ -8,7 +8,7 @@ HeartTalk is a friendly AI chatbot that provides basic medical guidance and symp
 
 ---
 
-#Features
+Features
 
 - Fast LLM Responses
 - Conversation Memory – remembers the full chat history
@@ -16,14 +16,14 @@ HeartTalk is a friendly AI chatbot that provides basic medical guidance and symp
 
 ---
 
-#How It Works
+How It Works
 
-| Language Model | `LLaMA3-8B` via Groq API|
-| Backend | `Flask` (Python) |
-| API Key Handling | `Render Environment Variables` |
-| Frontend | HTML, CSS, JS (Vanilla) |
-| UI Effects | Animated pixel hearts, Enter-key sending |
-| Hosting | [Render] |
-| CORS Support | `flask-cors` |
+- Language Model: LLaMA3-8B via Groq API
+- Backend: Flask (Python)
+- API Key Handling: Render Environment Variables
+- Frontend: HTML, CSS, JavaScript (Vanilla)
+- Hosting: Render
+- CORS Support: flask-cors
+
 
 ---
